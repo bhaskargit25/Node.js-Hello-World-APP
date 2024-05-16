@@ -19,13 +19,13 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.bhaskar739 }}
-          password: ${{ secrets.Bhaskar25@ }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker image
         run: |
-          docker build -t bhaskar739/hello-world:latest .
-          docker push bhaskar739/hello-world:latest
+          docker build -t YOUR_DOCKERHUB_USERNAME/hello-world:latest .
+          docker push YOUR_DOCKERHUB_USERNAME/hello-world:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,5 +46,5 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: ./terraform
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AKIAXYW3MCQATDJC7BFU }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.eH/ZLPkUh8YxJQknvbbzMKrJj/jgKO9bRjYGOAFd }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
