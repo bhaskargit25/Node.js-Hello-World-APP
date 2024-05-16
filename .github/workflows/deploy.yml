@@ -24,8 +24,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t YOUR_DOCKERHUB_USERNAME/hello-world:latest .
-          docker push YOUR_DOCKERHUB_USERNAME/hello-world:latest
+          docker build -t bhaskar739/hello-world:latest .
+          docker push bhaskar739/hello-world:latest
 
   deploy:
     runs-on: ubuntu-latest
