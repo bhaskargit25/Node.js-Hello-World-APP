@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/bhaskargit25/Node.js-Hello-World-APP.git"
   },
-  "author": "Your Name",
+  "author": "hello-world",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
