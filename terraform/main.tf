@@ -53,7 +53,7 @@ resource "aws_ecs_task_definition" "hello_world" {
   }])
 }
 
-resource "aws_ecs_service" "hello_world" {
+resource "aws_ecs_service" "hello_world":
   name            = "hello-world-service"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.hello_world.arn
